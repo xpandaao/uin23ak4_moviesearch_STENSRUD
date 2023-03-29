@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 export default function MovieCard({ img, title, year, gen, dir, act, imdbRating, awards, slug }) {
     return (
       <section className="movie">
-        <img src={img} alt={title} />
+        <img src={img !== "N/A" ? img : "https://via.placeholder.com/300x450?text=No+Poster+Available"} alt={title} />
         <h2>{title}</h2>
         <p>Year: <span>{year}</span></p>
         <p>Genre: <span>{gen}</span></p>
