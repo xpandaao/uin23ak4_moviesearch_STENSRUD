@@ -11,7 +11,7 @@ export default function MovieCard({ img, title, year, gen, dir, act, imdbRating,
         <p>Actors: <span>{act}</span></p>
         <p>Rating: <span>{imdbRating}</span></p>
         <p>Awards: <span>{awards}</span></p>
-        <Link to={slug} className="link">View Details</Link> // add link text
+        <Link to={slug} className="link">View Details</Link>
       </section>
     )
   }
