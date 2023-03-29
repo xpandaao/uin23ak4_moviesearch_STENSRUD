@@ -1,4 +1,8 @@
 import './css/main.css';
+import React, {useState, useEffect} from 'react';
+import { Route, Routes } from 'react-router-dom';
+import {Link} from "react-router-dom"
+import MovieCards from './Components/moviecards';
 
 function App() {
   return (
