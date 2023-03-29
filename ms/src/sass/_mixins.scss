@@ -1,0 +1,85 @@
+$ph-width: 0px;
+$tab-width: 768px;
+$desk-width: 1024px;
+$desk-L-width: 1440px;
+
+/* Flexbox */
+@mixin flx-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin flx-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  @mixin flx-left-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  @mixin flx-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  @mixin flx-right-start {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  /* For Columns */
+  @mixin flx-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  @mixin flx-col-left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @mixin flx-col-left-ns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @mixin flx-col-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  @mixin flx-col-right-ns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  @mixin flx-col-start-center {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+@mixin ph {
+  @media (min-width: #{$ph-width}) and (max-width: #{$tab-width - 1px}) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (min-width: #{$tab-width}) and (max-width: #{$desk-width - 1px}) {
+    @content;
+  }
+}
+@mixin des {
+  @media (min-width: #{$desk-width}) and (max-width: #{$desk-L-width - 1px}) {
+    @content;
+  }
+}
