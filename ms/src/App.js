@@ -46,7 +46,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route index element={<MovieCards movies={movies} setSearch={setSearchBar} />} />
+          <Route index element={<MovieCards movies={movies} setSearchBar={setSearchBar} />} />
         </Routes>
       </main>
       <footer>
