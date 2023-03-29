@@ -9,7 +9,7 @@ function App() {
   const [search, setSearchBar] = useState('');
 
   const getMovies = async (searchTerm) => {
-    const url = `http://www.omdbapi.com/?s=${searchTerm}&type=movie&plot=full&apikey=9b5050a3=json`;
+    const url = `http://www.omdbapi.com/?s=${searchTerm}&type=movie&plot=full&apikey=9b5050a3&=json`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
@@ -17,7 +17,7 @@ function App() {
     if (responseJson.Search) {
       const moviesWithInfo = await Promise.all(
           responseJson.Search.map(async (movie) => {
-            const movieUrl = `http://www.omdbapi.com/?i=${movie.imdbID}&plot=full&apikey=9b5050a3=json`;
+            const movieUrl = `http://www.omdbapi.com/?i=${movie.imdbID}&plot=full&apikey=9b5050a3&=json`;
             const movieResponse = await fetch(movieUrl);
             const movieResponseJson = await movieResponse.json();
             return { ...movie, ...movieResponseJson };
